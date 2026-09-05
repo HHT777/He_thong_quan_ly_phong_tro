@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh toán · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="thanh-toan" data-page-name="Thanh toán">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Tài chính / 09</div>
+              <h1 class="hero-title">Thanh toán & giao dịch</h1>
+              <p class="page-hero__subtitle">
+                Quản lý các khoản thanh toán đã xác nhận, đang chờ hoàn tất và
+                các giao dịch theo kỳ.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Tải về</button>
+              <button class="btn btn--primary" type="button">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Ghi thanh toán
+              </button>
+            </div>
+          </section>
+
+          <section class="stats-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 18h16M7 15V9m5 6V5m5 10v-9"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Doanh thu</div>
+              <div class="stat-card__value">82.4M</div>
+              <div class="text-muted">Tháng này</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 12h16M12 4v16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Đã thanh toán</div>
+              <div class="stat-card__value">71</div>
+              <div class="text-muted">Giao dịch hoàn tất</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Chờ xác nhận</div>
+              <div class="stat-card__value">12</div>
+              <div class="text-muted">Cần phụ trách kiểm tra</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6 12h12M6 8h12M6 16h8"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Khách nợ</div>
+              <div class="stat-card__value">08</div>
+              <div class="text-muted">Chưa đóng đủ</div>
+            </article>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Danh sách</div>
+                  <h2 class="section-title">Giao dịch gần đây</h2>
+                </div>
+                <span class="status-badge status-badge--info">Hôm nay</span>
+              </div>
+
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Khách thuê</th>
+                    <th>Loại</th>
+                    <th>Số tiền</th>
+                    <th>Thời gian</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Nguyễn Hà Anh</td>
+                    <td>Tiền phòng</td>
+                    <td>4.2 triệu</td>
+                    <td>08:15</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Thành công</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Lê Hoàng Nam</td>
+                    <td>Điện nước</td>
+                    <td>820k</td>
+                    <td>09:10</td>
+                    <td>
+                      <span class="status-badge status-badge--warning"
+                        >Đang chờ</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Trần Thị Mai</td>
+                    <td>Tiền phòng</td>
+                    <td>4.8 triệu</td>
+                    <td>10:30</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Thành công</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Phạm Nhật Minh</td>
+                    <td>Phạt trễ</td>
+                    <td>200k</td>
+                    <td>11:15</td>
+                    <td>
+                      <span class="status-badge status-badge--danger"
+                        >Quá hạn</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Phương thức</div>
+                    <h2 class="section-title">Hình thức thanh toán</h2>
+                  </div>
+                </div>
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <span class="metric-item__label">Chuyển khoản</span>
+                    <span class="metric-item__value">68%</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Tiền mặt</span>
+                    <span class="metric-item__value">24%</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Khác</span>
+                    <span class="metric-item__value">08%</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Nhắc nhở</div>
+                    <h2 class="section-title">Yêu cầu xử lý</h2>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">L</div>
+                    <div class="mini-list__meta">
+                      <strong>Lê Hoàng Nam</strong>
+                      <span>Chuyển khoản chờ xác nhận</span>
+                    </div>
+                    <span class="list-amount">2 giờ</span>
+                  </div>
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">T</div>
+                    <div class="mini-list__meta">
+                      <strong>Trần Thị Mai</strong>
+                      <span>Hóa đơn điện chưa đóng</span>
+                    </div>
+                    <span class="list-amount">1 ngày</span>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

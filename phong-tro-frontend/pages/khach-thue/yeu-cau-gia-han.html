@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yêu cầu gia hạn · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="gia-han" data-page-name="Yêu cầu gia hạn">
+    <div class="app-shell">
+      <div data-include="../../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../../components/navbar.html"></div>
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Khách thuê / 04</div>
+              <h1 class="hero-title">Yêu cầu gia hạn</h1>
+              <p class="page-hero__subtitle">
+                Gửi yêu cầu gia hạn hợp đồng với thời gian mong muốn và lý do
+                cần tiếp tục ở lại.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Xem lịch sử</button>
+              <button class="btn btn--primary" type="button">
+                Gửi yêu cầu
+              </button>
+            </div>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="form-card">
+              <div class="form-card__head">
+                <div>
+                  <div class="eyebrow">Gia hạn</div>
+                  <h2 class="section-title">Thông tin đề nghị</h2>
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label>Hiện tại</label><input value="18/08/2026" />
+                </div>
+                <div class="field">
+                  <label>Thời gian gia hạn muốn</label><input value="6 tháng" />
+                </div>
+                <div class="field">
+                  <label>Giá thuê đề xuất</label
+                  ><input value="4.5 triệu / tháng" />
+                </div>
+                <div class="field">
+                  <label>Trạng thái</label><input value="Chờ phê duyệt" />
+                </div>
+                <div class="field" style="grid-column: 1 / -1">
+                  <label>Lý do</label
+                  ><textarea>
+Mong muốn tiếp tục thuê thêm 6 tháng vì đã quen khu vực và cần thêm thời gian ổn định.</textarea
+                  >
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn--ghost" type="button">Hủy</button>
+                <button class="btn btn--primary" type="button">
+                  Gửi yêu cầu
+                </button>
+              </div>
+            </article>
+            <aside class="detail-card">
+              <div class="detail-card__head">
+                <div>
+                  <div class="eyebrow">Kết quả</div>
+                  <h2 class="section-title">Tình trạng</h2>
+                </div>
+              </div>
+              <div class="metric-list">
+                <div class="metric-item">
+                  <span class="metric-item__label">Trạng thái</span
+                  ><span class="status-badge status-badge--warning"
+                    >Chờ duyệt</span
+                  >
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Mức xử lý</span
+                  ><span class="metric-item__value">3 ngày</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Người duyệt</span
+                  ><span class="metric-item__value">Ban quản lý</span>
+                </div>
+              </div>
+            </aside>
+          </section>
+        </main>
+        <div data-include="../../components/footer.html"></div>
+      </div>
+    </div>
+    <script src="../../assets/js/utils/include.util.js"></script>
+    <script src="../../assets/js/utils/format.util.js"></script>
+    <script src="../../assets/js/components/sidebar.js"></script>
+    <script src="../../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

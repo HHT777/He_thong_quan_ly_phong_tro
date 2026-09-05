@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điện nước · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="dien-nuoc" data-page-name="Điện nước">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Tài chính / 07</div>
+              <h1 class="hero-title">Điện nước & chỉ số</h1>
+              <p class="page-hero__subtitle">
+                Theo dõi công suất tiêu thụ, nhập chỉ số hàng tháng và xác nhận
+                hóa đơn điện nước.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Lịch sử</button>
+              <button class="btn btn--primary" type="button">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Nhập chỉ số
+              </button>
+            </div>
+          </section>
+
+          <section class="stats-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2v20M4 7h16M4 17h16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Điện</div>
+              <div class="stat-card__value">1.420</div>
+              <div class="text-muted">kWh trong tháng</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 18c0-3 3-5 4-8 1 2 4 5 4 8a4 4 0 1 1-8 0Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Nước</div>
+              <div class="stat-card__value">480</div>
+              <div class="text-muted">người/tháng</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 4v16M4 12h16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Chờ xác nhận</div>
+              <div class="stat-card__value">26</div>
+              <div class="text-muted">hóa đơn cần kiểm tra</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 13.5 9 9l4 4 6-8"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Tỷ lệ xác nhận</div>
+              <div class="stat-card__value">94%</div>
+              <div class="text-muted">vượt mục tiêu</div>
+            </article>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Chỉ số</div>
+                  <h2 class="section-title">Theo dõi tiêu thụ</h2>
+                </div>
+                <span class="status-badge status-badge--info">Tháng 9</span>
+              </div>
+
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Phòng</th>
+                    <th>Điện cũ</th>
+                    <th>Điện mới</th>
+                    <th>Nước cũ</th>
+                    <th>Nước mới</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>P101</td>
+                    <td>180</td>
+                    <td>210</td>
+                    <td>12</td>
+                    <td>14</td>
+                  </tr>
+                  <tr>
+                    <td>P205</td>
+                    <td>240</td>
+                    <td>268</td>
+                    <td>18</td>
+                    <td>19</td>
+                  </tr>
+                  <tr>
+                    <td>P301</td>
+                    <td>135</td>
+                    <td>162</td>
+                    <td>10</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td>P404</td>
+                    <td>200</td>
+                    <td>220</td>
+                    <td>15</td>
+                    <td>17</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Xu hướng</div>
+                    <h2 class="section-title">Nhập liệu</h2>
+                  </div>
+                </div>
+                <div class="chart-bars">
+                  <div class="chart-bars__item">
+                    <div class="chart-bars__bar" style="height: 55%"></div>
+                    <span class="chart-bars__label">T1</span>
+                  </div>
+                  <div class="chart-bars__item">
+                    <div class="chart-bars__bar" style="height: 72%"></div>
+                    <span class="chart-bars__label">T2</span>
+                  </div>
+                  <div class="chart-bars__item">
+                    <div class="chart-bars__bar" style="height: 64%"></div>
+                    <span class="chart-bars__label">T3</span>
+                  </div>
+                  <div class="chart-bars__item">
+                    <div class="chart-bars__bar" style="height: 88%"></div>
+                    <span class="chart-bars__label">T4</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Báo động</div>
+                    <h2 class="section-title">Phòng cần kiểm tra</h2>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">P</div>
+                    <div class="mini-list__meta">
+                      <strong>P304</strong>
+                      <span>Tiêu thụ điện cao bất thường</span>
+                    </div>
+                    <span class="list-amount">Khẩn</span>
+                  </div>
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">P</div>
+                    <div class="mini-list__meta">
+                      <strong>P207</strong>
+                      <span>Nước chưa nhập chỉ số</span>
+                    </div>
+                    <span class="list-amount">3 ngày</span>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

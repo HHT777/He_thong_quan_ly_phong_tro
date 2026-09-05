@@ -1,0 +1,44 @@
+/* ============================================
+   BUTTON
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  transition: transform var(--dur-fast) var(--ease-soft), box-shadow var(--dur-fast) var(--ease-soft), background var(--dur-fast) var(--ease-soft);
+  white-space: nowrap;
+}
+.btn svg { width: 16px; height: 16px; }
+
+.btn--primary {
+  background: var(--teal-deep);
+  color: var(--white);
+  box-shadow: var(--shadow-navy);
+}
+.btn--primary:hover { transform: translateY(-2px); background: #0f3e5d; }
+.btn--primary:active { transform: translateY(0); }
+
+.btn--ghost {
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid var(--line);
+}
+.btn--ghost:hover { box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+
+/* hiệu ứng ripple điện ảnh nhẹ khi bấm */
+.btn { position: relative; overflow: hidden; }
+.btn__ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transform: scale(0);
+  animation: ripple 600ms var(--ease-out);
+  pointer-events: none;
+}
+@keyframes ripple {
+  to { transform: scale(3); opacity: 0; }
+}

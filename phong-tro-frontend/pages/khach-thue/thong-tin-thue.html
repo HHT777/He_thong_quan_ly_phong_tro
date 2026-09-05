@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin thuê · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="thong-tin-thue" data-page-name="Thông tin thuê">
+    <div class="app-shell">
+      <div data-include="../../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../../components/navbar.html"></div>
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Khách thuê / 01</div>
+              <h1 class="hero-title">Thông tin thuê</h1>
+              <p class="page-hero__subtitle">
+                Xem hồ sơ phòng, thời hạn hợp đồng, người liên hệ và lịch sử lưu
+                trú của bạn.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">
+                Liên hệ quản lý
+              </button>
+              <button class="btn btn--primary" type="button">
+                Cập nhật thông tin
+              </button>
+            </div>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="detail-card">
+              <div class="detail-card__head">
+                <div>
+                  <div class="eyebrow">Hồ sơ</div>
+                  <h2 class="section-title">Thông tin cơ bản</h2>
+                </div>
+              </div>
+              <div class="info-grid">
+                <div class="field">
+                  <label>Họ và tên</label
+                  ><input data-tenant-name readonly value="Đang tải..." />
+                </div>
+                <div class="field">
+                  <label>Mã phòng</label
+                  ><input data-tenant-room readonly value="Đang tải..." />
+                </div>
+                <div class="field">
+                  <label>Ngày bắt đầu</label
+                  ><input data-tenant-start readonly value="Đang tải..." />
+                </div>
+                <div class="field">
+                  <label>Ngày kết thúc</label
+                  ><input data-tenant-end readonly value="Đang tải..." />
+                </div>
+                <div class="field">
+                  <label>Số điện thoại</label
+                  ><input data-tenant-phone readonly value="Đang tải..." />
+                </div>
+                <div class="field">
+                  <label>Giá tiền phòng</label
+                  ><input data-tenant-rent readonly value="Đang tải..." />
+                </div>
+              </div>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Tình trạng</div>
+                    <h2 class="section-title">Phòng của bạn</h2>
+                  </div>
+                </div>
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <span class="metric-item__label">Trạng thái tài khoản</span
+                    ><span class="status-badge status-badge--success"
+                      >Ổn định</span
+                    >
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Hợp đồng</span
+                    ><span class="metric-item__value" data-tenant-contract
+                      >—</span
+                    >
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Cọc</span
+                    ><span class="metric-item__value" data-tenant-deposit
+                      >—</span
+                    >
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+        <div data-include="../../components/footer.html"></div>
+      </div>
+    </div>
+    <script src="../../assets/js/utils/include.util.js"></script>
+    <script src="../../assets/js/utils/format.util.js"></script>
+    <script src="../../assets/js/config/apiConfig.js"></script>
+    <script src="../../assets/js/services/apiClient.js"></script>
+    <script src="../../assets/js/components/sidebar.js"></script>
+    <script src="../../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+    <script src="../../assets/js/pages/khachThue/thongTinThue.page.js"></script>
+  </body>
+</html>

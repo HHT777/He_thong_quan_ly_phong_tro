@@ -1,0 +1,483 @@
+/* ============================================
+   SHARED PAGE LAYOUT — TroHub management pages
+   ============================================ */
+
+.page-shell {
+  padding: 32px clamp(20px, 3vw, 44px) 52px;
+  max-width: var(--content-max);
+  width: 100%;
+}
+
+.page-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.page-hero__subtitle {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  max-width: 560px;
+}
+
+.page-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.toolbar__left,
+.toolbar__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  min-width: min(100%, 270px);
+}
+
+.search-box input,
+.search-box select,
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  height: 42px;
+  padding: 0 14px;
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+  transition: border-color var(--dur-fast) var(--ease-soft), box-shadow var(--dur-fast) var(--ease-soft);
+}
+
+.search-box input:focus,
+.search-box select:focus,
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: rgba(19, 75, 112, 0.5);
+  box-shadow: 0 0 0 4px rgba(19, 75, 112, 0.08);
+}
+
+.search-box svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  color: var(--ink-soft);
+}
+
+.search-box input {
+  padding-left: 38px;
+}
+
+.stats-grid,
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.summary-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.panel-grid--three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.stack-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.info-card,
+.table-card,
+.form-card,
+.detail-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  padding: 22px;
+}
+
+.info-card__head,
+.table-card__head,
+.form-card__head,
+.detail-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.metric-list {
+  display: grid;
+  gap: 12px;
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.metric-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.metric-item__label {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.metric-item__value {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  padding: 6px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.status-badge--success {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.status-badge--warning {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.status-badge--danger {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.status-badge--info {
+  background: var(--teal-15);
+  color: var(--teal-deep);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.data-table thead th {
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+}
+
+.data-table tbody td {
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  vertical-align: middle;
+}
+
+.data-table tbody tr:hover {
+  background: rgba(19, 75, 112, 0.02);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--mist);
+  color: var(--navy);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.field textarea {
+  min-height: 110px;
+  padding-top: 12px;
+  resize: vertical;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.inline-balance {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.inline-balance strong {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--navy);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--mist);
+  overflow: hidden;
+}
+
+.progress-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--teal-deep), var(--teal));
+}
+
+.mini-list {
+  display: grid;
+  gap: 12px;
+}
+
+.mini-list__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.mini-list__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.mini-list__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--teal-15);
+  color: var(--teal-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mini-list__meta {
+  flex: 1;
+}
+
+.mini-list__meta strong {
+  display: block;
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.mini-list__meta span {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.list-amount {
+  text-align: right;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 180px;
+  padding-top: 24px;
+}
+
+.chart-bars__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-bars__bar {
+  width: 100%;
+  max-width: 42px;
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(180deg, var(--teal) 0%, var(--teal-deep) 100%);
+  min-height: 20px;
+}
+
+.chart-bars__label {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  border: 1px dashed rgba(19, 75, 112, 0.25);
+  background: rgba(19, 75, 112, 0.02);
+  border-radius: var(--radius-md);
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 28px;
+}
+
+@media (max-width: 1180px) {
+  .stats-grid,
+  .summary-grid,
+  .summary-grid--three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panel-grid,
+  .panel-grid--three {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 24px 16px 48px;
+  }
+
+  .page-hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-hero__actions,
+  .toolbar,
+  .toolbar__left,
+  .toolbar__right,
+  .form-actions {
+    width: 100%;
+  }
+
+  .stats-grid,
+  .summary-grid,
+  .summary-grid--three,
+  .form-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-card,
+  .info-card,
+  .form-card,
+  .detail-card {
+    padding: 18px;
+  }
+
+  .data-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

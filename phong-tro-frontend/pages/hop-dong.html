@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hợp đồng · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="hop-dong" data-page-name="Hợp đồng">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Hợp đồng / 05</div>
+              <h1 class="hero-title">Quản lý hợp đồng</h1>
+              <p class="page-hero__subtitle">
+                Theo dõi thời hạn hiệu lực, gia hạn, thanh toán đặt cọc và các
+                công việc cần xác nhận.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">
+                Thoát hợp đồng
+              </button>
+              <button class="btn btn--primary" type="button">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Tạo hợp đồng
+              </button>
+            </div>
+          </section>
+
+          <section class="stats-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 3h8l4 4v14H7V3Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 12h6M10 16h6M10 8h2"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Tổng HĐ</div>
+              <div class="stat-card__value">165</div>
+              <div class="text-muted">Cập nhật vào ngày hôm nay</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 12h8M12 8v8"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="8"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Đang hiệu lực</div>
+              <div class="stat-card__value">142</div>
+              <div class="text-muted">86% tình trạng tốt</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 21s-7-4.5-9-8.4C1.5 10.1 3.8 5 8.6 5c2.1 0 3.3 1 4.4 2.6C14.1 6 15.3 5 17.4 5 22.2 5 24.5 10.1 21 12.6c-2 3.9-9 8.4-9 8.4Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Sắp hết hạn</div>
+              <div class="stat-card__value">24</div>
+              <div class="text-muted">Cần nhắc nhở trong 30 ngày</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 12h16M12 4v16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Gia hạn</div>
+              <div class="stat-card__value">08</div>
+              <div class="text-muted">Trong lịch xử lý tuần này</div>
+            </article>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Theo dõi</div>
+                  <h2 class="section-title">Danh sách hợp đồng</h2>
+                </div>
+                <span class="status-badge status-badge--info">Quý IV</span>
+              </div>
+
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Mã HĐ</th>
+                    <th>Khách thuê</th>
+                    <th>Phòng</th>
+                    <th>Hiệu lực</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody data-hop-dong-rows>
+                  <tr>
+                    <td>HD-1021</td>
+                    <td>Nguyễn Hà Anh</td>
+                    <td>P101</td>
+                    <td>12/08/2025 - 12/08/2026</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Hiệu lực</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>HD-1048</td>
+                    <td>Lê Hoàng Nam</td>
+                    <td>P205</td>
+                    <td>02/09/2025 - 02/09/2026</td>
+                    <td>
+                      <span class="status-badge status-badge--warning"
+                        >Sắp hết</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>HD-1103</td>
+                    <td>Trần Thị Mai</td>
+                    <td>P301</td>
+                    <td>20/09/2025 - 20/09/2026</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Hiệu lực</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>HD-1175</td>
+                    <td>Phạm Nhật Minh</td>
+                    <td>P404</td>
+                    <td>16/08/2024 - 16/08/2025</td>
+                    <td>
+                      <span class="status-badge status-badge--danger"
+                        >Hết hạn</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Mục tiêu</div>
+                    <h2 class="section-title">Điều khoản</h2>
+                  </div>
+                </div>
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <span class="metric-item__label">Cọc</span>
+                    <span class="metric-item__value">2 tháng</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Điện/nước</span>
+                    <span class="metric-item__value">Đơn giá chuẩn</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Phạt</span>
+                    <span class="metric-item__value">10%/tháng</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Nhắc nhở</div>
+                    <h2 class="section-title">Hợp đồng cần xử lý</h2>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">N</div>
+                    <div class="mini-list__meta">
+                      <strong>HD-1048</strong>
+                      <span>Gia hạn trong 7 ngày</span>
+                    </div>
+                    <span class="list-amount">Chờ</span>
+                  </div>
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">T</div>
+                    <div class="mini-list__meta">
+                      <strong>HD-1175</strong>
+                      <span>Chuẩn bị xử lý cuối</span>
+                    </div>
+                    <span class="list-amount">Khẩn</span>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script src="../assets/js/config/apiConfig.js"></script>
+    <script src="../assets/js/services/apiClient.js"></script>
+    <script src="../assets/js/pages/hopDong.page.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

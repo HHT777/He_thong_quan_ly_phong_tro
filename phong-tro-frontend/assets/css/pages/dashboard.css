@@ -1,0 +1,141 @@
+/* ============================================
+   DASHBOARD (Tổng quan)
+   ============================================ */
+.app-shell { min-height: 100vh; }
+
+.main-area {
+  margin-left: var(--sidebar-w);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 36px clamp(20px, 3vw, 44px) 60px;
+  max-width: var(--content-max);
+  width: 100%;
+}
+
+/* ---- Header hero ---- */
+.page-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 6px;
+  flex-wrap: wrap;
+}
+.page-hero__glow {
+  position: absolute;
+  top: -60px; left: -20px;
+  width: 340px; height: 240px;
+  background: radial-gradient(circle, var(--teal-30) 0%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: -1;
+}
+.page-hero__subtitle { margin-top: 10px; font-size: 15px; color: var(--ink-soft); max-width: 460px; }
+
+/* ---- Lưới 4 stat card ---- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+/* ---- Hàng: biểu đồ dòng tiền + donut phân bổ phòng ---- */
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.cashflow-figure {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 4px 0 18px;
+}
+.cashflow-figure small { font-size: 20px; font-weight: 500; }
+
+.chart-wrap { height: 220px; }
+
+.donut-wrap { display: flex; align-items: center; gap: 22px; }
+.donut-canvas-box { position: relative; width: 150px; height: 150px; flex-shrink: 0; }
+.donut-center {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.donut-center__value { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--navy); }
+.donut-center__label { font-size: 11px; color: var(--ink-soft); }
+
+.legend { display: flex; flex-direction: column; gap: 14px; }
+.legend__item { display: flex; align-items: center; gap: 10px; font-size: 13.5px; }
+.legend__dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+.legend__dot--rented { background: var(--teal-deep); }
+.legend__dot--vacant { background: var(--warning); }
+.legend__count { font-weight: 700; color: var(--navy); }
+
+/* ---- Hàng 3 khối cuối trang ---- */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* ---- Footer ---- */
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px clamp(20px, 3vw, 44px) 26px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.app-footer__status { display: inline-flex; align-items: center; gap: 6px; }
+.app-footer__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 3px var(--success-bg); }
+
+/* ---- Hiệu ứng vào trang (reveal) ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: reveal-up var(--dur-slow) var(--ease-out) forwards;
+}
+@keyframes reveal-up {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1180px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .insight-grid { grid-template-columns: 1fr; }
+  .bottom-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 960px) {
+  .main-area { margin-left: 0; }
+  .help-widget { left: 20px; }
+}
+
+@media (max-width: 640px) {
+  .stat-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .main-content { padding: 24px 16px 48px; }
+  .page-hero { flex-direction: column; align-items: stretch; }
+  .page-hero .btn { justify-content: center; }
+  .stat-card { padding: 16px; }
+  .stat-card__value { font-size: 26px; }
+  .card { padding: 18px; }
+  .donut-wrap { flex-direction: column; align-items: flex-start; }
+}

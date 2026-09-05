@@ -1,0 +1,105 @@
+<header class="navbar">
+  <div class="navbar__left">
+    <button class="navbar__menu-btn" data-sidebar-open aria-label="Mở menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M3 6h18M3 12h18M3 18h18"
+          stroke="#201E43"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+    <div>
+      <div class="navbar__breadcrumb" data-page-title>
+        Tổng quan
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M6 9l6 6 6-6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="navbar__date" data-current-date></div>
+    </div>
+  </div>
+
+  <div class="navbar__right">
+    <button class="icon-btn" aria-label="Thông báo">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M6 9a6 6 0 1 1 12 0c0 4 1.5 5.5 1.5 5.5H4.5S6 13 6 9Z"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M9.5 17.5a2.5 2.5 0 0 0 5 0"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+      </svg>
+      <span class="icon-btn__dot"></span>
+    </button>
+
+    <div class="navbar__user-wrap">
+      <button
+        class="navbar__user"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navbarUserMenu"
+      >
+        <div class="navbar__user-avatar" data-user-avatar>MH</div>
+        <div>
+          <div class="navbar__user-name" data-user-name>Minh Hoàng</div>
+          <div class="navbar__user-role" data-user-role>Chủ tài sản</div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M6 9l6 6 6-6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <div class="navbar__user-menu" id="navbarUserMenu" hidden>
+        <a href="/pages/cai-dat.html" data-profile-link>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle
+              cx="12"
+              cy="8"
+              r="3.2"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+            <path
+              d="M5.5 20c.8-3.4 3-5 6.5-5s5.7 1.6 6.5 5"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+          Hồ sơ cá nhân
+        </a>
+        <button type="button" data-logout>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M10 5H5v14h5M14 8l4 4-4 4M9 12h9"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Đăng xuất
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

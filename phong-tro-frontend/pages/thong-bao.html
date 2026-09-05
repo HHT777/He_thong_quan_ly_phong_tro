@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông báo · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="thong-bao" data-page-name="Thông báo">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Thông tin / 13</div>
+              <h1 class="hero-title">Trung tâm thông báo</h1>
+              <p class="page-hero__subtitle">
+                Gửi nhắc nhở, lịch hẹn và cập nhật quan trọng đến cư dân và nhân
+                sự trong chuỗi trọ.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Nháp</button>
+              <button class="btn btn--primary" type="button">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Tạo thông báo
+              </button>
+            </div>
+          </section>
+
+          <section class="stats-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6 9a6 6 0 1 1 12 0c0 4 1.5 5.5 1.5 5.5H4.5S6 13 6 9Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.5 17.5a2.5 2.5 0 0 0 5 0"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Thông báo</div>
+              <div class="stat-card__value">42</div>
+              <div class="text-muted">đã gửi trong tháng</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 12h10M12 7v10"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Chờ gửi</div>
+              <div class="stat-card__value">06</div>
+              <div class="text-muted">cập nhật thiếu</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 21s-7-4.6-9-8.4C1.5 10.6 3.7 5 8.5 5C10.7 5 12 6.3 12 8.2c0-1.9 1.3-3.2 3.5-3.2 4.8 0 7 5.6 5.5 7.4C19 16.4 12 21 12 21Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Tương tác</div>
+              <div class="stat-card__value">1.8k</div>
+              <div class="text-muted">tỷ lệ đọc cao</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 13.5 9 9l4 4 6-8"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Hiệu quả</div>
+              <div class="stat-card__value">96%</div>
+              <div class="text-muted">tỷ lệ phản hồi tích cực</div>
+            </article>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Gần đây</div>
+                  <h2 class="section-title">Danh sách thông báo</h2>
+                </div>
+                <button class="btn btn--ghost" type="button">Lọc</button>
+              </div>
+
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tiêu đề</th>
+                    <th>Nhóm</th>
+                    <th>Ngày gửi</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Nhắc lịch thu tiền mặt</td>
+                    <td>Cư dân</td>
+                    <td>05/09</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Đã gửi</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Thông báo bảo trì máy lạnh</td>
+                    <td>Nhà trọ</td>
+                    <td>06/09</td>
+                    <td>
+                      <span class="status-badge status-badge--info"
+                        >Đang gửi</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Khuyến mãi phòng trống</td>
+                    <td>Marketing</td>
+                    <td>07/09</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Đã gửi</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nhắc nợ tiền điện</td>
+                    <td>Thanh toán</td>
+                    <td>09/09</td>
+                    <td>
+                      <span class="status-badge status-badge--warning"
+                        >Nháp</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Phân bổ</div>
+                    <h2 class="section-title">Theo mục đích</h2>
+                  </div>
+                </div>
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <span class="metric-item__label">Nhắc thu</span>
+                    <span class="metric-item__value">18</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Bảo trì</span>
+                    <span class="metric-item__value">08</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Sự kiện</span>
+                    <span class="metric-item__value">06</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Mốc</div>
+                    <h2 class="section-title">Cần gửi ngay</h2>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">N</div>
+                    <div class="mini-list__meta">
+                      <strong>Nhắc nợ điện</strong>
+                      <span>4 khu trọ còn nợ</span>
+                    </div>
+                    <span class="list-amount">Hôm nay</span>
+                  </div>
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">B</div>
+                    <div class="mini-list__meta">
+                      <strong>Bảo trì máy lạnh</strong>
+                      <span>Thời gian sửa 2 ngày</span>
+                    </div>
+                    <span class="list-amount">1 ngày</span>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

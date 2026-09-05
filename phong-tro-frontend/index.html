@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập · TroHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/pages/login-entry.css" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-store, no-cache, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+  </head>
+  <body>
+    <script>
+      localStorage.removeItem("trohub_token");
+      localStorage.removeItem("trohub_user");
+    </script>
+    <main class="login-shell">
+      <section class="login-intro" aria-label="Giới thiệu TroHub">
+        <div class="login-brand">
+          <span class="login-brand-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 21V9.5L12 3l9 6.5V21H14v-7h-4v7H3Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          TroHub
+        </div>
+        <div>
+          <p class="login-kicker">Quản lý chuỗi phòng trọ</p>
+          <h1>Mọi căn phòng, rõ ràng trong một nhịp.</h1>
+          <p>
+            Đăng nhập để tiếp tục quản lý tài sản, hợp đồng và các khoản thanh
+            toán của bạn.
+          </p>
+        </div>
+      </section>
+
+      <section class="login-form-panel">
+        <h2>Chào mừng trở lại</h2>
+        <p>Tài khoản của bạn sẽ được đưa tới đúng giao diện.</p>
+        <form class="login-form" id="loginForm">
+          <label for="username">Tên đăng nhập</label>
+          <input
+            id="username"
+            name="ten_dang_nhap"
+            autocomplete="username"
+            required
+          />
+          <label for="password">Mật khẩu</label>
+          <input
+            id="password"
+            name="mat_khau"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+          <button type="submit">Đăng nhập</button>
+          <div
+            id="loginError"
+            class="login-error"
+            role="alert"
+            aria-live="polite"
+          ></div>
+        </form>
+        <small class="login-hint"
+          >Tài khoản chủ trọ thử nghiệm: chutro / 123456</small
+        >
+      </section>
+    </main>
+    <script type="module" src="assets/js/config/apiConfig.js"></script>
+    <script type="module" src="assets/js/services/apiClient.js"></script>
+    <script type="module" src="assets/js/pages/index.page.js"></script>
+  </body>
+</html>

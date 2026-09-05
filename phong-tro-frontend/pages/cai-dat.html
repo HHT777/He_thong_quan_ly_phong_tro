@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cài đặt · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="cai-dat" data-page-name="Cài đặt">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Hệ thống / 08</div>
+              <h1 class="hero-title">Cài đặt</h1>
+              <p class="page-hero__subtitle">
+                Quản lý thông tin không gian, tùy chọn vận hành và quyền truy
+                cập.
+              </p>
+            </div>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="detail-card">
+              <div class="detail-card__head">
+                <div>
+                  <div class="eyebrow">Không gian</div>
+                  <h2 class="section-title">Thông tin Minh Housing</h2>
+                </div>
+              </div>
+              <div class="metric-list">
+                <div class="metric-item">
+                  <span class="metric-item__label">Tên không gian</span>
+                  <strong class="metric-item__value">Minh Housing</strong>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Địa chỉ</span>
+                  <strong class="metric-item__value">Hà Nội</strong>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Số căn đang quản lý</span>
+                  <strong class="metric-item__value">24 căn</strong>
+                </div>
+              </div>
+              <button class="btn btn--ghost" type="button">
+                Chỉnh sửa thông tin
+              </button>
+            </article>
+
+            <article class="detail-card">
+              <div class="detail-card__head">
+                <div>
+                  <div class="eyebrow">Thông báo</div>
+                  <h2 class="section-title">Tùy chọn nhắc việc</h2>
+                </div>
+              </div>
+              <div class="metric-list">
+                <label class="metric-item">
+                  <span class="metric-item__label">Nhắc hạn hợp đồng</span>
+                  <input type="checkbox" checked />
+                </label>
+                <label class="metric-item">
+                  <span class="metric-item__label">Nhắc khoản phải thu</span>
+                  <input type="checkbox" checked />
+                </label>
+                <label class="metric-item">
+                  <span class="metric-item__label">Thông báo sự cố</span>
+                  <input type="checkbox" checked />
+                </label>
+              </div>
+              <button class="btn btn--primary" type="button">
+                Lưu tùy chọn
+              </button>
+            </article>
+
+            <article class="detail-card">
+              <div class="detail-card__head">
+                <div>
+                  <div class="eyebrow">Tài khoản</div>
+                  <h2 class="section-title">Minh Hoàng</h2>
+                </div>
+              </div>
+              <div class="metric-list">
+                <div class="metric-item">
+                  <span class="metric-item__label">Vai trò</span>
+                  <strong class="metric-item__value">Chủ tài sản</strong>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Email</span>
+                  <strong class="metric-item__value">minh@example.com</strong>
+                </div>
+              </div>
+              <button class="btn btn--ghost" type="button">Đổi mật khẩu</button>
+            </article>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

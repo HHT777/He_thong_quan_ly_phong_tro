@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cư dân · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="cu-dan" data-page-name="Cư dân">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Khách thuê / 04</div>
+              <h1 class="hero-title">Danh sách cư dân</h1>
+              <p class="page-hero__subtitle">
+                Quản lý thông tin cư dân, hợp đồng và tình trạng thanh toán
+                trong một cửa.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Nhập file</button>
+              <button class="btn btn--primary" type="button">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Thêm cư dân
+              </button>
+            </div>
+          </section>
+
+          <section class="stats-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle
+                    cx="9"
+                    cy="8"
+                    r="3.2"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M3.5 20c0-3.3 2.5-6 6-6s6 2.7 6 6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M16 4.3c1.5.5 2.6 2 2.6 3.7 0 1.7-1.1 3.2-2.6 3.7M18.5 14c2 .6 3.5 2.7 3.5 5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Cư dân</div>
+              <div class="stat-card__value">188</div>
+              <div class="text-muted">+12 người mới trong 30 ngày</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 3h8l4 4v14H7V3Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 12h6M10 16h6M10 8h2"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Hợp đồng</div>
+              <div class="stat-card__value">165</div>
+              <div class="text-muted">42 đang hết hạn trong 3 tháng</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 4v16M4 12h16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Tỷ lệ thanh toán</div>
+              <div class="stat-card__value">96%</div>
+              <div class="text-muted">Cập nhật hàng ngày</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 21s-6.5-4.5-9-8.2C1.5 10.5 3.3 5 8 5c2.1 0 3.3 1.2 4 2.4C12.7 6.2 13.9 5 16 5c4.7 0 6.5 5.5 5 7.8-2.5 3.7-9 8.2-9 8.2Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Tiền cọc</div>
+              <div class="stat-card__value">₹ 26M</div>
+              <div class="text-muted">13 giao dịch tháng này</div>
+            </article>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Danh sách</div>
+                  <h2 class="section-title">Cư dân hiện tại</h2>
+                </div>
+                <button class="btn btn--ghost" type="button">Lọc</button>
+              </div>
+
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Họ tên</th>
+                    <th>Phòng</th>
+                    <th>Hợp đồng</th>
+                    <th>Đến hạn</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody data-khach-thue-rows>
+                  <tr>
+                    <td>Nguyễn Hà Anh</td>
+                    <td>P101</td>
+                    <td>HD-1021</td>
+                    <td>14/09/2026</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Ổn định</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Lê Hoàng Nam</td>
+                    <td>P205</td>
+                    <td>HD-1048</td>
+                    <td>02/10/2026</td>
+                    <td>
+                      <span class="status-badge status-badge--warning"
+                        >Sắp hết</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Trần Thị Mai</td>
+                    <td>P301</td>
+                    <td>HD-1103</td>
+                    <td>20/09/2026</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Ổn định</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Phạm Nhật Minh</td>
+                    <td>P404</td>
+                    <td>HD-1175</td>
+                    <td>16/08/2026</td>
+                    <td>
+                      <span class="status-badge status-badge--danger"
+                        >Quá hạn</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Tiến độ</div>
+                    <h2 class="section-title">Số liệu trọng tâm</h2>
+                  </div>
+                </div>
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <span class="metric-item__label">Sinh hoạt</span>
+                    <span class="metric-item__value">92%</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Vi phạm</span>
+                    <span class="metric-item__value">04</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Yêu cầu xử lý</span>
+                    <span class="metric-item__value">09</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Cần chú ý</div>
+                    <h2 class="section-title">Sinh hoạt của cư dân</h2>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">M</div>
+                    <div class="mini-list__meta">
+                      <strong>Gia hạn hợp đồng</strong>
+                      <span>2 đơn chờ duyệt</span>
+                    </div>
+                    <span class="list-amount">4 ngày</span>
+                  </div>
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">N</div>
+                    <div class="mini-list__meta">
+                      <strong>Yêu cầu trả phòng</strong>
+                      <span>1 khách mới nộp</span>
+                    </div>
+                    <span class="list-amount">2 ngày</span>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script src="../assets/js/config/apiConfig.js"></script>
+    <script src="../assets/js/services/apiClient.js"></script>
+    <script src="../assets/js/pages/khachThue.page.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

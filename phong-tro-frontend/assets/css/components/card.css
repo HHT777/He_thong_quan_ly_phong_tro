@@ -1,0 +1,172 @@
+/* ============================================
+   CARD — khối nội dung dùng chung
+   ============================================ */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  transition: box-shadow var(--dur-base) var(--ease-soft), transform var(--dur-base) var(--ease-soft);
+}
+.card:hover { box-shadow: var(--shadow-md); }
+
+.card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  transition: gap var(--dur-fast) var(--ease-soft);
+}
+.card__link svg { width: 13px; height: 13px; }
+.card__link:hover { gap: 8px; }
+
+.card__more {
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  color: var(--ink-soft);
+  transition: background var(--dur-fast) var(--ease-soft);
+}
+.card__more:hover { background: var(--mist); }
+
+.dropdown-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--mist);
+  border-radius: var(--radius-pill);
+  padding: 7px 12px;
+}
+.dropdown-pill svg { width: 12px; height: 12px; }
+
+/* ---- Stat card (4 ô số liệu đầu trang) ---- */
+.stat-card {
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+.stat-card:hover { transform: translateY(-4px); }
+.stat-card__icon {
+  width: 38px; height: 38px;
+  border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 22px;
+}
+.stat-card__icon svg { width: 18px; height: 18px; }
+.stat-card__label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.stat-card__more {
+  position: absolute;
+  top: 20px; right: 18px;
+  color: inherit;
+  opacity: 0.55;
+}
+
+.stat-card--primary { background: var(--navy); color: var(--white); box-shadow: var(--shadow-navy); }
+.stat-card--primary .stat-card__icon { background: rgba(255,255,255,0.12); color: var(--white); }
+
+.stat-card--tealtint { background: var(--teal-15); color: var(--teal-deep); }
+.stat-card--tealtint .stat-card__icon { background: rgba(255,255,255,0.65); color: var(--teal-deep); }
+
+.stat-card--deeptint { background: var(--teal-deep-12); color: var(--teal-deep); }
+.stat-card--deeptint .stat-card__icon { background: rgba(255,255,255,0.7); color: var(--teal-deep); }
+
+.stat-card--navytint { background: var(--navy-10); color: var(--navy); }
+.stat-card--navytint .stat-card__icon { background: rgba(255,255,255,0.75); color: var(--navy); }
+
+/* ---- Danh sách hàng (list-row) dùng cho 3 khối cuối trang ---- */
+.list-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.list-row:last-child { border-bottom: none; padding-bottom: 0; }
+.list-row:first-child { padding-top: 0; }
+
+.avatar-chip {
+  width: 38px; height: 38px;
+  border-radius: 11px;
+  background: var(--teal-15);
+  color: var(--teal-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12.5px; font-weight: 700;
+  flex-shrink: 0;
+}
+
+.list-row__title { font-size: 14px; font-weight: 600; color: var(--navy); }
+.list-row__sub { font-size: 12.5px; color: var(--ink-soft); margin-top: 2px; }
+.list-row__end { text-align: right; margin-left: auto; flex-shrink: 0; }
+.list-row__amount { font-size: 14px; font-weight: 700; color: var(--navy); }
+.list-row__meta { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+.list-row__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: var(--radius-pill);
+}
+.list-row__tag--danger { background: var(--danger-bg); color: var(--danger); }
+.list-row__tag--warn { background: var(--warning-bg); color: var(--warning); }
+
+/* ---- Nhật ký hoạt động ---- */
+.activity-row { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.activity-row:last-child { border-bottom: none; padding-bottom: 0; }
+.activity-row:first-child { padding-top: 0; }
+.activity-row__icon {
+  width: 34px; height: 34px; border-radius: 50%;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.activity-row__icon svg { width: 15px; height: 15px; }
+.activity-row__icon--pay { background: var(--success-bg); color: var(--success); }
+.activity-row__icon--issue { background: var(--danger-bg); color: var(--danger); }
+.activity-row__icon--meter { background: var(--teal-15); color: var(--teal-deep); }
+.activity-row__icon--contract { background: var(--warning-bg); color: var(--warning); }
+.activity-row__title { font-size: 13.5px; font-weight: 600; color: var(--navy); }
+.activity-row__sub { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+.activity-row__time { font-size: 11.5px; color: var(--ink-soft); margin-left: auto; white-space: nowrap; padding-left: 10px; }
+
+/* ---- Banner nhỏ trong khối donut ---- */
+.mini-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--mist);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-top: 18px;
+}
+.mini-banner svg { width: 15px; height: 15px; color: var(--teal-deep); flex-shrink: 0; }
+.mini-banner b { color: var(--navy); }

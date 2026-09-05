@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhập chỉ số điện · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="nhap-chi-so" data-page-name="Nhập chỉ số">
+    <div class="app-shell">
+      <div data-include="../../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../../components/navbar.html"></div>
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Khách thuê / 03</div>
+              <h1 class="hero-title">Nhập chỉ số điện</h1>
+              <p class="page-hero__subtitle">
+                Gửi chỉ số mới để quản lý tính toán tiền điện nước chính xác và
+                cập nhật hóa đơn tháng này.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Xem lịch sử</button>
+              <button class="btn btn--primary" type="button">Lưu chỉ số</button>
+            </div>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="form-card">
+              <div class="form-card__head">
+                <div>
+                  <div class="eyebrow">Điện nước</div>
+                  <h2 class="section-title">Chỉ số tháng này</h2>
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label>Chỉ số điện cũ</label><input value="180" />
+                </div>
+                <div class="field">
+                  <label>Chỉ số điện mới</label><input value="210" />
+                </div>
+                <div class="field">
+                  <label>Chỉ số nước cũ</label><input value="12" />
+                </div>
+                <div class="field">
+                  <label>Chỉ số nước mới</label><input value="14" />
+                </div>
+                <div class="field" style="grid-column: 1 / -1">
+                  <label>Ghi chú</label
+                  ><textarea>
+Chỉ số máy lạnh và thiết bị giặt hoạt động bình thường.</textarea
+                  >
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn--ghost" type="button">Hủy</button>
+                <button class="btn btn--primary" type="button">Xác nhận</button>
+              </div>
+            </article>
+            <aside class="detail-card">
+              <div class="detail-card__head">
+                <div>
+                  <div class="eyebrow">Tổng tiền</div>
+                  <h2 class="section-title">Ước tính</h2>
+                </div>
+              </div>
+              <div class="metric-list">
+                <div class="metric-item">
+                  <span class="metric-item__label">Tiền điện</span
+                  ><span class="metric-item__value">180K</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Tiền nước</span
+                  ><span class="metric-item__value">64K</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Tổng</span
+                  ><span class="metric-item__value">244K</span>
+                </div>
+              </div>
+            </aside>
+          </section>
+        </main>
+        <div data-include="../../components/footer.html"></div>
+      </div>
+    </div>
+    <script src="../../assets/js/utils/include.util.js"></script>
+    <script src="../../assets/js/utils/format.util.js"></script>
+    <script src="../../assets/js/components/sidebar.js"></script>
+    <script src="../../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

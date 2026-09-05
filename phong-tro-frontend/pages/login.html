@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập · TroHub</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        margin: 0;
+        background: #f4f1ea;
+        color: #201e43;
+        font:
+          16px/1.5 Arial,
+          sans-serif;
+      }
+      main {
+        width: min(420px, calc(100% - 40px));
+        padding: 36px;
+        background: #fff;
+        border: 1px solid #e2e4e8;
+        border-radius: 8px;
+        box-shadow: 0 18px 50px rgba(32, 30, 67, 0.1);
+      }
+      h1 {
+        margin: 0 0 8px;
+      }
+      p {
+        margin: 0 0 24px;
+        color: #5b6072;
+      }
+      label {
+        display: block;
+        margin: 16px 0 6px;
+        font-weight: 600;
+      }
+      input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #cfd3da;
+        border-radius: 6px;
+        font: inherit;
+      }
+      button {
+        width: 100%;
+        margin-top: 24px;
+        padding: 12px;
+        border: 0;
+        border-radius: 6px;
+        background: #134b70;
+        color: #fff;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.65;
+        cursor: wait;
+      }
+      [role="alert"] {
+        min-height: 24px;
+        margin-top: 14px;
+        color: #b42318;
+      }
+      small {
+        display: block;
+        margin-top: 20px;
+        color: #5b6072;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Chào mừng trở lại</h1>
+      <p>Đăng nhập để quản lý chuỗi phòng trọ của bạn.</p>
+      <form id="loginForm">
+        <label for="username">Tên đăng nhập</label>
+        <input
+          id="username"
+          name="ten_dang_nhap"
+          autocomplete="username"
+          required
+        />
+        <label for="password">Mật khẩu</label>
+        <input
+          id="password"
+          name="mat_khau"
+          type="password"
+          autocomplete="current-password"
+          required
+        />
+        <button type="submit">Đăng nhập</button>
+        <div id="loginError" role="alert" aria-live="polite"></div>
+      </form>
+      <small>Tài khoản thử nghiệm: chutro / 123456</small>
+    </main>
+    <script type="module" src="../assets/js/config/apiConfig.js"></script>
+    <script type="module" src="../assets/js/services/apiClient.js"></script>
+    <script type="module" src="../assets/js/pages/login.page.js"></script>
+  </body>
+</html>

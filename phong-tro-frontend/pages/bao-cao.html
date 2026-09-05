@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Báo cáo · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="bao-cao" data-page-name="Báo cáo">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Phân tích / 10</div>
+              <h1 class="hero-title">Báo cáo & phân tích</h1>
+              <p class="page-hero__subtitle">
+                Đánh giá dòng tiền, doanh thu, hiệu suất vận hành và tiến độ
+                theo từng tháng.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Xuất PDF</button>
+              <button class="btn btn--primary" type="button">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Tạo báo cáo
+              </button>
+            </div>
+          </section>
+
+          <section class="stats-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 18h16M7 15V9m5 6V5m5 10v-7"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Lợi nhuận</div>
+              <div class="stat-card__value">48.6M</div>
+              <div class="text-muted">+12% so với tháng trước</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 13.5 9 9l4 4 7-9"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Tăng trưởng</div>
+              <div class="stat-card__value">12.4%</div>
+              <div class="text-muted">do doanh thu cải thiện</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 12h16M12 4v16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Chi phí</div>
+              <div class="stat-card__value">18.1M</div>
+              <div class="text-muted">Điện nước & bảo trì</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6 12h12M12 6v12"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Doanh thu</div>
+              <div class="stat-card__value">66.7M</div>
+              <div class="text-muted">Tổng khối tiền thu</div>
+            </article>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Chỉ số</div>
+                  <h2 class="section-title">Báo cáo theo quý</h2>
+                </div>
+                <span class="status-badge status-badge--info">Q3</span>
+              </div>
+
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tháng</th>
+                    <th>Doanh thu</th>
+                    <th>Chi phí</th>
+                    <th>Lợi nhuận</th>
+                    <th>Tỷ lệ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tháng 7</td>
+                    <td>18.4M</td>
+                    <td>5.1M</td>
+                    <td>13.3M</td>
+                    <td>72%</td>
+                  </tr>
+                  <tr>
+                    <td>Tháng 8</td>
+                    <td>20.1M</td>
+                    <td>5.7M</td>
+                    <td>14.4M</td>
+                    <td>72%</td>
+                  </tr>
+                  <tr>
+                    <td>Tháng 9</td>
+                    <td>22.7M</td>
+                    <td>6.3M</td>
+                    <td>16.4M</td>
+                    <td>72%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Hiệu suất</div>
+                    <h2 class="section-title">Chỉ số vận hành</h2>
+                  </div>
+                </div>
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <span class="metric-item__label">Tỷ lệ lấp đầy</span>
+                    <span class="metric-item__value">75%</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Tỷ lệ thanh toán</span>
+                    <span class="metric-item__value">96%</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Mức phản hồi</span>
+                    <span class="metric-item__value">84%</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Kiến nghị</div>
+                    <h2 class="section-title">Điểm cải tiến</h2>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">L</div>
+                    <div class="mini-list__meta">
+                      <strong>Giảm chi phí</strong>
+                      <span>Ưu tiên bảo trì phòng 304</span>
+                    </div>
+                    <span class="list-amount">11%</span>
+                  </div>
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">D</div>
+                    <div class="mini-list__meta">
+                      <strong>Tăng lấp đầy</strong>
+                      <span>Phòng sắp trống cần quảng bá</span>
+                    </div>
+                    <span class="list-amount">+3%</span>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

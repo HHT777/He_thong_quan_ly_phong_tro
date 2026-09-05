@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yêu cầu trả phòng · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="tra-phong-client" data-page-name="Yêu cầu trả phòng">
+    <div class="app-shell">
+      <div data-include="../../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../../components/navbar.html"></div>
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Khách thuê / 05</div>
+              <h1 class="hero-title">Yêu cầu trả phòng</h1>
+              <p class="page-hero__subtitle">
+                Nộp đơn kết thúc hợp đồng với ngày dự kiến trả phòng và thông
+                tin kiểm tra cuối cùng.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Xem tiến độ</button>
+              <button class="btn btn--primary" type="button">
+                Gửi yêu cầu
+              </button>
+            </div>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="form-card">
+              <div class="form-card__head">
+                <div>
+                  <div class="eyebrow">Kết thúc</div>
+                  <h2 class="section-title">Đơn trả phòng</h2>
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label>Ngày dự kiến</label><input value="20/09/2026" />
+                </div>
+                <div class="field">
+                  <label>Hạn cọc</label><input value="3 ngày sau hoàn tất" />
+                </div>
+                <div class="field" style="grid-column: 1 / -1">
+                  <label>Ghi chú</label
+                  ><textarea>
+Rời phòng để chuyển chỗ ở mới. Mong quản lý kiểm tra tình trạng phòng và hoàn cọc đúng hẹn.</textarea
+                  >
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn--ghost" type="button">Hủy</button>
+                <button class="btn btn--primary" type="button">
+                  Gửi yêu cầu
+                </button>
+              </div>
+            </article>
+            <aside class="detail-card">
+              <div class="detail-card__head">
+                <div>
+                  <div class="eyebrow">Tiến độ</div>
+                  <h2 class="section-title">Trạng thái</h2>
+                </div>
+              </div>
+              <div class="metric-list">
+                <div class="metric-item">
+                  <span class="metric-item__label">Trạng thái</span
+                  ><span class="status-badge status-badge--success"
+                    >Đã gửi</span
+                  >
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Kiểm tra phòng</span
+                  ><span class="metric-item__value">Chưa bắt đầu</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Thời gian dự kiến</span
+                  ><span class="metric-item__value">7 ngày</span>
+                </div>
+              </div>
+            </aside>
+          </section>
+        </main>
+        <div data-include="../../components/footer.html"></div>
+      </div>
+    </div>
+    <script src="../../assets/js/utils/include.util.js"></script>
+    <script src="../../assets/js/utils/format.util.js"></script>
+    <script src="../../assets/js/components/sidebar.js"></script>
+    <script src="../../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>
