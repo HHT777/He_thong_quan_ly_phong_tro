@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trả phòng · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="tra-phong" data-page-name="Trả phòng">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Hậu xử lý / 15</div>
+              <h1 class="hero-title">Quy trình trả phòng</h1>
+              <p class="page-hero__subtitle">
+                Theo dõi lịch trả phòng, làm sạch, hoàn cọc và cuối cùng kết
+                thúc hợp đồng an toàn.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Chốt tiến độ</button>
+              <button class="btn btn--primary" type="button">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Tạo yêu cầu
+              </button>
+            </div>
+          </section>
+
+          <section class="stats-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 7h10v10H7z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M4 12h16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Đang xử lý</div>
+              <div class="stat-card__value">06</div>
+              <div class="text-muted">trả phòng đang diễn ra</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12h14M12 5v14"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Hoàn tất</div>
+              <div class="stat-card__value">18</div>
+              <div class="text-muted">trong 30 ngày</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 7h8v10H8zM10 10h4M10 14h4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Cọc chờ hoàn</div>
+              <div class="stat-card__value">7.8M</div>
+              <div class="text-muted">cần kiểm tra</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 13.5 9 9l4 4 6-8"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Tỷ lệ hoàn thành</div>
+              <div class="stat-card__value">92%</div>
+              <div class="text-muted">tốc độ xử lý</div>
+            </article>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Quy trình</div>
+                  <h2 class="section-title">Danh sách trả phòng</h2>
+                </div>
+                <span class="status-badge status-badge--warning">Tuần này</span>
+              </div>
+
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Khách thuê</th>
+                    <th>Phòng</th>
+                    <th>Ngày dự kiến</th>
+                    <th>Giai đoạn</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Nguyễn Minh</td>
+                    <td>P210</td>
+                    <td>12/09</td>
+                    <td>Kiểm tra phòng</td>
+                    <td>
+                      <span class="status-badge status-badge--info"
+                        >Đang xử lý</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Lan Anh</td>
+                    <td>P308</td>
+                    <td>15/09</td>
+                    <td>Hoàn cọc</td>
+                    <td>
+                      <span class="status-badge status-badge--warning"
+                        >Chờ xác nhận</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Hồng Nhung</td>
+                    <td>P115</td>
+                    <td>18/09</td>
+                    <td>Thủ tục kết thúc</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Sắp xong</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Đức Huy</td>
+                    <td>P420</td>
+                    <td>20/09</td>
+                    <td>Vệ sinh</td>
+                    <td>
+                      <span class="status-badge status-badge--danger"
+                        >Chậm tiến độ</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Cân chỉnh</div>
+                    <h2 class="section-title">Tiến độ quy trình</h2>
+                  </div>
+                </div>
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <span class="metric-item__label">Kiểm tra phòng</span>
+                    <span class="metric-item__value">88%</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Vệ sinh</span>
+                    <span class="metric-item__value">70%</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Hoàn cọc</span>
+                    <span class="metric-item__value">64%</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Tiếp theo</div>
+                    <h2 class="section-title">Nhiệm vụ ưu tiên</h2>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">D</div>
+                    <div class="mini-list__meta">
+                      <strong>Đức Huy</strong>
+                      <span>Dọn vệ sinh phòng trước ngày 20/09</span>
+                    </div>
+                    <span class="list-amount">Khẩn</span>
+                  </div>
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">L</div>
+                    <div class="mini-list__meta">
+                      <strong>Lan Anh</strong>
+                      <span>Xác nhận hoàn cọc cuối</span>
+                    </div>
+                    <span class="list-amount">2 ngày</span>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

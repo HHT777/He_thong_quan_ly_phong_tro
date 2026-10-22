@@ -1,0 +1,59 @@
+/* ============================================
+   TYPOGRAPHY
+   Display: Fraunces (serif, ấm, "điện ảnh")
+   Body:    Inter (sans, rõ ràng, dễ đọc cho mọi lứa tuổi)
+   ============================================ */
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--mist);
+  font-size: 15px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.eyebrow--accent { color: var(--teal-deep); }
+
+.hero-title {
+  font-size: clamp(28px, 3.4vw, 42px);
+  margin-top: 10px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.text-muted { color: var(--ink-soft); }
+
+.mono-figure {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.delta svg { width: 13px; height: 13px; }
+.delta--up { color: var(--success); }
+.delta--down { color: var(--teal-deep); }
+.delta--warn { color: var(--danger); }

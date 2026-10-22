@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tổng quan · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+  </head>
+  <body data-active-page="dashboard" data-page-name="Tổng quan">
+    <div class="app-shell">
+      <!-- SIDEBAR (nạp từ components/sidebar.html) -->
+      <div data-include="../components/sidebar.html"></div>
+
+      <div class="main-area">
+        <!-- NAVBAR (nạp từ components/navbar.html) -->
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content">
+          <!-- HERO -->
+          <section class="page-hero reveal">
+            <span class="page-hero__glow"></span>
+            <div>
+              <div class="eyebrow eyebrow--accent">Bảng điều khiển / 01</div>
+              <h1 class="hero-title" id="heroGreeting">Chào buổi sáng</h1>
+              <p class="page-hero__subtitle">
+                Đây là nhịp vận hành của danh mục tài sản hôm nay.
+              </p>
+            </div>
+            <button class="btn btn--primary" id="addAssetBtn">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 5v14M5 12h14"
+                  stroke="#fff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              Thêm tài sản
+            </button>
+          </section>
+
+          <!-- 4 STAT CARDS -->
+          <section
+            class="stat-grid"
+            id="statGrid"
+            aria-label="Số liệu tổng quan"
+          ></section>
+
+          <!-- DÒNG TIỀN + PHÂN BỔ PHÒNG -->
+          <section class="insight-grid">
+            <article class="card reveal" style="animation-delay: 220ms">
+              <div class="card__head">
+                <div>
+                  <div class="eyebrow">Dòng tiền</div>
+                  <h2 class="section-title">Doanh thu theo tháng</h2>
+                </div>
+                <span class="dropdown-pill">
+                  6 tháng
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M6 9l6 6 6-6"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="cashflow-figure">
+                <span id="cashflowTotal">—</span>
+                <small class="delta delta--up" id="cashflowDelta"></small>
+              </div>
+              <div class="chart-wrap"><canvas id="cashflowChart"></canvas></div>
+            </article>
+
+            <article class="card reveal" style="animation-delay: 280ms">
+              <div class="card__head">
+                <div>
+                  <div class="eyebrow">Phân bổ phòng</div>
+                  <h2 class="section-title">Tình trạng lấp đầy</h2>
+                </div>
+                <button class="card__more" aria-label="Xuất báo cáo">
+                  <svg viewBox="0 0 24 24" fill="none" width="15" height="15">
+                    <path
+                      d="M12 19V5M5 12l7-7 7 7"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="donut-wrap">
+                <div class="donut-canvas-box">
+                  <canvas id="occupancyChart"></canvas>
+                  <div class="donut-center">
+                    <div
+                      class="donut-center__value mono-figure"
+                      id="occRateValue"
+                    >
+                      0%
+                    </div>
+                    <div class="donut-center__label">lấp đầy</div>
+                  </div>
+                </div>
+                <div class="legend">
+                  <div class="legend__item">
+                    <span class="legend__dot legend__dot--rented"></span>Đang
+                    thuê&nbsp;<span class="legend__count" id="occRented">0</span
+                    >&nbsp;phòng
+                  </div>
+                  <div class="legend__item">
+                    <span class="legend__dot legend__dot--vacant"></span>Đang
+                    trống&nbsp;<span class="legend__count" id="occVacant"
+                      >0</span
+                    >&nbsp;phòng
+                  </div>
+                </div>
+              </div>
+              <div class="mini-banner">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M17 7 7 17M7 7h10v10"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span id="occDelta"></span>
+              </div>
+            </article>
+          </section>
+
+          <!-- 3 KHỐI CUỐI: HỢP ĐỒNG SẮP HẾT HẠN / KHOẢN PHẢI THU / NHẬT KÝ -->
+          <section class="bottom-grid">
+            <article class="card reveal" style="animation-delay: 340ms">
+              <div class="card__head">
+                <div>
+                  <div class="eyebrow">Cần lưu ý</div>
+                  <h2 class="section-title">Hợp đồng sắp hết hạn</h2>
+                </div>
+                <a href="hop-dong.html" class="card__link">
+                  Xem tất cả
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M9 6l6 6-6 6"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div id="expiringList"></div>
+            </article>
+
+            <article class="card reveal" style="animation-delay: 400ms">
+              <div class="card__head">
+                <div>
+                  <div class="eyebrow">Dòng tiền</div>
+                  <h2 class="section-title">Khoản phải thu</h2>
+                </div>
+                <a href="thu-chi.html" class="card__link">
+                  Xem tất cả
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M9 6l6 6-6 6"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div id="receivableList"></div>
+            </article>
+
+            <article class="card reveal" style="animation-delay: 460ms">
+              <div class="card__head">
+                <div>
+                  <div class="eyebrow">Nhật ký</div>
+                  <h2 class="section-title">Hoạt động gần đây</h2>
+                </div>
+                <button class="card__more" aria-label="Tuỳ chọn">
+                  <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+                    <circle cx="5" cy="12" r="1.6" fill="currentColor" />
+                    <circle cx="12" cy="12" r="1.6" fill="currentColor" />
+                    <circle cx="19" cy="12" r="1.6" fill="currentColor" />
+                  </svg>
+                </button>
+              </div>
+              <div id="activityList"></div>
+            </article>
+          </section>
+        </main>
+
+        <!-- FOOTER (nạp từ components/footer.html) -->
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <!-- Chart.js cho biểu đồ đường + biểu đồ tròn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script type="module" src="../assets/js/config/apiConfig.js"></script>
+    <script type="module" src="../assets/js/services/apiClient.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script src="../assets/js/pages/dashboard.page.js"></script>
+    <script>
+      includeAll();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiền phải trả · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="tien-phai-tra" data-page-name="Tiền phải trả">
+    <div class="app-shell">
+      <div data-include="../../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../../components/navbar.html"></div>
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Khách thuê / 02</div>
+              <h1 class="hero-title">Tiền phải trả</h1>
+              <p class="page-hero__subtitle">
+                Xem chi tiết các khoản cần thanh toán: tiền phòng, điện nước,
+                phụ phí và thời hạn thanh toán.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Lịch sử</button>
+              <button class="btn btn--primary" type="button">
+                Thanh toán ngay
+              </button>
+            </div>
+          </section>
+
+          <section class="summary-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__label">Tổng cần trả</div>
+              <div class="stat-card__value" data-bill-total>0đ</div>
+              <div class="text-muted">Cập nhật mới nhất</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__label">Đã thanh toán</div>
+              <div class="stat-card__value" data-bill-paid>0đ</div>
+              <div class="text-muted">Hóa đơn đã đóng</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__label">Còn nợ</div>
+              <div class="stat-card__value" data-bill-due>0đ</div>
+              <div class="text-muted">Nhắc thanh toán sớm</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__label">Hạn cuối</div>
+              <div class="stat-card__value" data-bill-due-date>—</div>
+              <div class="text-muted">Trong 3 ngày</div>
+            </article>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Chi tiết</div>
+                  <h2 class="section-title">Hóa đơn</h2>
+                </div>
+              </div>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Khoản</th>
+                    <th>Tháng</th>
+                    <th>Số tiền</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody data-bill-rows>
+                  <tr>
+                    <td>Tiền phòng</td>
+                    <td>09/2026</td>
+                    <td>4.2M</td>
+                    <td>
+                      <span class="status-badge status-badge--warning"
+                        >Chưa đóng</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Điện nước</td>
+                    <td>09/2026</td>
+                    <td>320K</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Đã đóng</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Phụ phí khác</td>
+                    <td>09/2026</td>
+                    <td>120K</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Đã đóng</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+            <aside class="detail-card">
+              <div class="detail-card__head">
+                <div>
+                  <div class="eyebrow">Thanh toán</div>
+                  <h2 class="section-title">Thông tin chuyển khoản</h2>
+                </div>
+              </div>
+              <div class="metric-list">
+                <div class="metric-item">
+                  <span class="metric-item__label">Tên ngân hàng</span
+                  ><span class="metric-item__value">Vietcombank</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Số tài khoản</span
+                  ><span class="metric-item__value">1000 123 456</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-item__label">Chủ tài khoản</span
+                  ><span class="metric-item__value">Minh Housing</span>
+                </div>
+              </div>
+            </aside>
+          </section>
+        </main>
+        <div data-include="../../components/footer.html"></div>
+      </div>
+    </div>
+    <script src="../../assets/js/utils/include.util.js"></script>
+    <script src="../../assets/js/utils/format.util.js"></script>
+    <script src="../../assets/js/config/apiConfig.js"></script>
+    <script src="../../assets/js/services/apiClient.js"></script>
+    <script src="../../assets/js/components/sidebar.js"></script>
+    <script src="../../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+    <script src="../../assets/js/pages/khachThue/tienPhaiTra.page.js"></script>
+  </body>
+</html>

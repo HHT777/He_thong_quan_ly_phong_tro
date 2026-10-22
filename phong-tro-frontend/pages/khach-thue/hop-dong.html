@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hợp đồng thuê · TroHub</title>
+    <link rel="stylesheet" href="../../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="hop-dong-thue" data-page-name="Hợp đồng">
+    <div class="app-shell">
+      <div data-include="../../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../../components/navbar.html"></div>
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Khách thuê / 04</div>
+              <h1 class="hero-title">Hợp đồng thuê</h1>
+              <p class="page-hero__subtitle">
+                Thông tin hợp đồng đang hiệu lực của bạn.
+              </p>
+            </div>
+          </section>
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <h2 class="section-title">Chi tiết hợp đồng</h2>
+              </div>
+              <div data-tenant-contract-detail>Đang tải...</div>
+            </article>
+          </section>
+        </main>
+        <div data-include="../../components/footer.html"></div>
+      </div>
+    </div>
+    <script src="../../assets/js/utils/include.util.js"></script>
+    <script src="../../assets/js/utils/format.util.js"></script>
+    <script src="../../assets/js/config/apiConfig.js"></script>
+    <script src="../../assets/js/services/apiClient.js"></script>
+    <script src="../../assets/js/components/sidebar.js"></script>
+    <script src="../../assets/js/components/navbar.js"></script>
+    <script src="../../assets/js/pages/khachThue/hopDong.page.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

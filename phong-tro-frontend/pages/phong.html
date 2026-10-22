@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý phòng · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="phong" data-page-name="Quản lý phòng">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Vận hành / 03</div>
+              <h1 class="hero-title">Danh sách phòng</h1>
+              <p class="page-hero__subtitle">
+                Theo dõi tình trạng phòng, giá thuê và tiến độ nhận cư dân mới
+                trong chuỗi nhà trọ.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Xuất Excel</button>
+              <button class="btn btn--primary" type="button">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Tạo phòng mới
+              </button>
+            </div>
+          </section>
+
+          <section class="stats-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M3 21V9.5L12 3l9 6.5V21H14v-7h-4v7H3Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Số phòng</div>
+              <div class="stat-card__value" data-room-total>0</div>
+              <div class="text-muted">Dữ liệu từ MySQL</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 12h16M12 4v16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Đang thuê</div>
+              <div class="stat-card__value" data-room-rented>0</div>
+              <div class="text-muted" data-room-rate>0%</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 11V6h14v5M7 18h10a2 2 0 0 0 2-2v-5H5v5a2 2 0 0 0 2 2Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Còn trống</div>
+              <div class="stat-card__value" data-room-vacant>0</div>
+              <div class="text-muted">Trạng thái TRONG</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3v18M3 12h18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Tổng doanh thu</div>
+              <div class="stat-card__value" data-room-revenue>0đ</div>
+              <div class="text-muted">Tổng giá thuê hiện tại</div>
+            </article>
+          </section>
+
+          <section class="toolbar reveal">
+            <div class="toolbar__left">
+              <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle
+                    cx="11"
+                    cy="11"
+                    r="6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M16 16l4 4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <input
+                  type="search"
+                  placeholder="Tìm phòng, tầng, trạng thái"
+                  data-room-search
+                />
+              </div>
+            </div>
+            <div class="toolbar__right">
+              <select class="field-select" aria-label="Chọn tầng">
+                <option>Tất cả tầng</option>
+                <option>Tầng 1</option>
+                <option>Tầng 2</option>
+                <option>Tầng 3</option>
+              </select>
+              <button class="btn btn--ghost" type="button">Bộ lọc</button>
+            </div>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Bảng dữ liệu</div>
+                  <h2 class="section-title">Danh sách phòng</h2>
+                </div>
+                <span class="status-badge status-badge--info" data-room-updated
+                  >Đang tải...</span
+                >
+              </div>
+
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Phòng</th>
+                    <th>Tầng</th>
+                    <th>Loại</th>
+                    <th>Giá thuê</th>
+                    <th>Trạng thái</th>
+                    <th>Khách thuê</th>
+                  </tr>
+                </thead>
+                <tbody data-room-rows></tbody>
+              </table>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Theo dõi</div>
+                    <h2 class="section-title">Tỷ lệ lấp đầy</h2>
+                  </div>
+                </div>
+                <div class="inline-balance">
+                  <span class="text-muted">Hiện tại</span>
+                  <strong>75%</strong>
+                </div>
+                <div class="progress-bar" style="margin-top: 16px">
+                  <span style="width: 75%"></span>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Chốt lịch</div>
+                    <h2 class="section-title">Nhận phòng sắp tới</h2>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">P</div>
+                    <div class="mini-list__meta">
+                      <strong>P102</strong>
+                      <span>Ngày nhận: 12/09</span>
+                    </div>
+                    <span class="list-amount">3 ngày</span>
+                  </div>
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">P</div>
+                    <div class="mini-list__meta">
+                      <strong>P205</strong>
+                      <span>Đang làm hợp đồng</span>
+                    </div>
+                    <span class="list-amount">7 ngày</span>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script src="../assets/js/config/apiConfig.js"></script>
+    <script src="../assets/js/services/apiClient.js"></script>
+    <script src="../assets/js/pages/phong.page.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>

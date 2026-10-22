@@ -1,0 +1,108 @@
+phong-tro-frontend/
+├── public/
+│   └── favicon.ico
+├── assets/
+│   ├── css/
+│   │   ├── base/
+│   │   │   ├── reset.css
+│   │   │   ├── variables.css
+│   │   │   └── typography.css
+│   │   ├── components/
+│   │   │   ├── sidebar.css
+│   │   │   ├── navbar.css
+│   │   │   ├── table.css
+│   │   │   ├── modal.css
+│   │   │   ├── card.css
+│   │   │   └── button.css
+│   │   └── pages/
+│   │       ├── dashboard.css
+│   │       ├── phong.css
+│   │       └── hopDong.css
+│   ├── js/
+│   │   ├── config/
+│   │   │   └── apiConfig.js
+│   │   ├── services/
+│   │   │   ├── authService.js
+│   │   │   ├── canTroService.js
+│   │   │   ├── phongService.js
+│   │   │   ├── khachThueService.js
+│   │   │   ├── cocService.js
+│   │   │   ├── hopDongService.js
+│   │   │   ├── dienNuocService.js
+│   │   │   ├── tienPhongService.js
+│   │   │   ├── thanhToanService.js
+│   │   │   ├── congNoService.js
+│   │   │   ├── thuChiService.js
+│   │   │   ├── suCoService.js
+│   │   │   ├── traPhongService.js
+│   │   │   ├── baoCaoService.js
+│   │   │   └── thongBaoService.js
+│   │   ├── components/
+│   │   │   ├── sidebar.js
+│   │   │   ├── navbar.js
+│   │   │   ├── dataTable.js
+│   │   │   ├── modal.js
+│   │   │   ├── toast.js
+│   │   │   └── pagination.js
+│   │   ├── pages/
+│   │   │   ├── login.page.js
+│   │   │   ├── dashboard.page.js
+│   │   │   ├── canTro.page.js
+│   │   │   ├── phong.page.js
+│   │   │   ├── khachThue.page.js
+│   │   │   ├── coc.page.js
+│   │   │   ├── hopDong.page.js
+│   │   │   ├── dienNuoc.page.js
+│   │   │   ├── tienPhong.page.js
+│   │   │   ├── thanhToan.page.js
+│   │   │   ├── congNo.page.js
+│   │   │   ├── thuChi.page.js
+│   │   │   ├── suCo.page.js
+│   │   │   ├── traPhong.page.js
+│   │   │   ├── baoCao.page.js
+│   │   │   ├── thongBao.page.js
+│   │   │   └── khachThue/
+│   │   │       ├── thongTinThue.page.js
+│   │   │       ├── tienPhaiTra.page.js
+│   │   │       ├── nhapChiSoDien.page.js
+│   │   │       ├── yeuCauGiaHan.page.js
+│   │   │       └── yeuCauTraPhong.page.js
+│   │   └── utils/
+│   │       ├── auth.util.js
+│   │       ├── validate.util.js
+│   │       ├── format.util.js
+│   │       └── httpClient.js
+│   └── images/
+│       ├── logo.png
+│       └── icons/
+├── pages/
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── can-tro.html
+│   ├── phong.html
+│   ├── khach-thue.html
+│   ├── coc.html
+│   ├── hop-dong.html
+│   ├── dien-nuoc.html
+│   ├── tien-phong.html
+│   ├── thanh-toan.html
+│   ├── cong-no.html
+│   ├── thu-chi.html
+│   ├── su-co.html
+│   ├── tra-phong.html
+│   ├── bao-cao.html
+│   ├── thong-bao.html
+│   └── khach-thue/
+│       ├── thong-tin-thue.html
+│       ├── tien-phai-tra.html
+│       ├── nhap-chi-so-dien.html
+│       ├── yeu-cau-gia-han.html
+│       └── yeu-cau-tra-phong.html
+├── components/
+│   ├── sidebar.html
+│   ├── navbar.html
+│   └── footer.html
+├── index.html
+├── .gitignore
+├── README.md
+└── package.json

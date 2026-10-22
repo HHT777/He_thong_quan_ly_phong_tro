@@ -1,0 +1,63 @@
+/* ============================================
+   DESIGN TOKENS — TroHub / Quản lý chuỗi phòng trọ
+   Bảng màu gốc: #201E43 · #134B70 · #508C9B · #EEEEEE
+   ============================================ */
+:root {
+  /* ---- Màu thương hiệu (4 màu gốc) ---- */
+  --navy:        #201E43; /* nền tối, chữ nhấn mạnh, sidebar   */
+  --teal-deep:   #134B70; /* accent chính, nút, icon chủ đạo   */
+  --teal:        #508C9B; /* accent phụ, biểu đồ, hover        */
+  --mist:        #EEEEEE; /* nền trang, khối phụ                */
+
+  /* ---- Dẫn xuất từ 4 màu gốc (đổ bóng/độ trong suốt) ---- */
+  --navy-90:     rgba(32, 30, 67, 0.92);
+  --navy-70:     rgba(32, 30, 67, 0.7);
+  --navy-10:     rgba(32, 30, 67, 0.08);
+  --teal-deep-12: rgba(19, 75, 112, 0.12);
+  --teal-deep-08: rgba(19, 75, 112, 0.08);
+  --teal-15:     rgba(80, 140, 155, 0.16);
+  --teal-30:     rgba(80, 140, 155, 0.32);
+  --mist-hover:  #E4E7EA;
+
+  --white:       #FFFFFF;
+  --ink:         #1A1B2E;      /* chữ chính trên nền sáng   */
+  --ink-soft:    #5B6072;      /* chữ phụ / mô tả           */
+  --line:        #E2E4E8;      /* viền mảnh                 */
+
+  /* ---- Trạng thái (giữ trong tông thương hiệu) ---- */
+  --success:     #1F8F63;
+  --success-bg:  #E4F5EC;
+  --danger:      #C24B3F;
+  --danger-bg:   #FBEAE7;
+  --warning:     #B4791F;
+  --warning-bg:  #FBF0DE;
+
+  /* ---- Kiểu chữ ---- */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* ---- Bo góc ---- */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* ---- Đổ bóng: mềm, có chiều sâu điện ảnh ---- */
+  --shadow-xs: 0 1px 2px rgba(20, 22, 41, 0.05);
+  --shadow-sm: 0 4px 14px rgba(20, 22, 41, 0.06);
+  --shadow-md: 0 12px 30px rgba(20, 22, 41, 0.10);
+  --shadow-lg: 0 24px 60px rgba(20, 22, 41, 0.16);
+  --shadow-navy: 0 18px 38px rgba(19, 75, 112, 0.28);
+
+  /* ---- Chuyển động ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur-base: 280ms;
+  --dur-slow: 560ms;
+
+  /* ---- Bố cục ---- */
+  --sidebar-w: 272px;
+  --navbar-h: 76px;
+  --content-max: 1320px;
+}

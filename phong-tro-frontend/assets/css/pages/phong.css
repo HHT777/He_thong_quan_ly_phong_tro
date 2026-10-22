@@ -1,0 +1,9 @@
+.phong-page {
+  padding: 24px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}

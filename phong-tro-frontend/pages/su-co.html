@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sự cố · TroHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/base/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typography.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/card.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/pages/management.css" />
+  </head>
+  <body data-active-page="su-co" data-page-name="Sự cố">
+    <div class="app-shell">
+      <div data-include="../components/sidebar.html"></div>
+      <div class="main-area">
+        <div data-include="../components/navbar.html"></div>
+
+        <main class="main-content page-shell">
+          <section class="page-hero reveal">
+            <div>
+              <div class="eyebrow eyebrow--accent">Vận hành / 11</div>
+              <h1 class="hero-title">Sự cố & bảo trì</h1>
+              <p class="page-hero__subtitle">
+                Theo dõi lỗi kỹ thuật, hỏng hóc tiện ích và tiến độ xử lý từ
+                nhân sự kỹ thuật.
+              </p>
+            </div>
+            <div class="page-hero__actions">
+              <button class="btn btn--ghost" type="button">Lịch sử</button>
+              <button class="btn btn--primary" type="button">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Báo sự cố
+              </button>
+            </div>
+          </section>
+
+          <section class="stats-grid reveal">
+            <article class="stat-card stat-card--primary">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3v9M8 7h8M12 12l5 6M12 12l-5 6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Tổng sự cố</div>
+              <div class="stat-card__value">24</div>
+              <div class="text-muted">tháng này</div>
+            </article>
+            <article class="stat-card stat-card--tealtint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Đang xử lý</div>
+              <div class="stat-card__value">08</div>
+              <div class="text-muted">đã phân công</div>
+            </article>
+            <article class="stat-card stat-card--deeptint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3v8m0 10v-8m-9 0h18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Hoàn tất</div>
+              <div class="stat-card__value">16</div>
+              <div class="text-muted">trong 7 ngày</div>
+            </article>
+            <article class="stat-card stat-card--navytint">
+              <div class="stat-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 4v16M4 12h16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stat-card__label">Mức độ khẩn</div>
+              <div class="stat-card__value">03</div>
+              <div class="text-muted">hướng sự cố khẩn cấp</div>
+            </article>
+          </section>
+
+          <section class="panel-grid reveal">
+            <article class="table-card">
+              <div class="table-card__head">
+                <div>
+                  <div class="eyebrow">Danh mục</div>
+                  <h2 class="section-title">Sự cố gần đây</h2>
+                </div>
+                <span class="status-badge status-badge--warning">Tuần này</span>
+              </div>
+
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Phòng</th>
+                    <th>Vấn đề</th>
+                    <th>Ưu tiên</th>
+                    <th>Trạng thái</th>
+                    <th>Thời gian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>P304</td>
+                    <td>Máy lạnh không lạnh</td>
+                    <td>Khẩn</td>
+                    <td>
+                      <span class="status-badge status-badge--danger"
+                        >Đang xử lý</span
+                      >
+                    </td>
+                    <td>2h trước</td>
+                  </tr>
+                  <tr>
+                    <td>P201</td>
+                    <td>Ổ cắm điện hỏng</td>
+                    <td>Trung bình</td>
+                    <td>
+                      <span class="status-badge status-badge--warning"
+                        >Chờ linh kiện</span
+                      >
+                    </td>
+                    <td>8h trước</td>
+                  </tr>
+                  <tr>
+                    <td>P102</td>
+                    <td>Vòi nước rỉ</td>
+                    <td>Thấp</td>
+                    <td>
+                      <span class="status-badge status-badge--success"
+                        >Đã xử lý</span
+                      >
+                    </td>
+                    <td>1 ngày</td>
+                  </tr>
+                  <tr>
+                    <td>P502</td>
+                    <td>Đèn tắt</td>
+                    <td>Thấp</td>
+                    <td>
+                      <span class="status-badge status-badge--info"
+                        >Đang kiểm tra</span
+                      >
+                    </td>
+                    <td>2 ngày</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <aside class="stack-grid">
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Cấp độ</div>
+                    <h2 class="section-title">Phân loại</h2>
+                  </div>
+                </div>
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <span class="metric-item__label">Khẩn cấp</span>
+                    <span class="metric-item__value">03</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Trung bình</span>
+                    <span class="metric-item__value">11</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-item__label">Thấp</span>
+                    <span class="metric-item__value">10</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="detail-card__head">
+                  <div>
+                    <div class="eyebrow">Lực lượng</div>
+                    <h2 class="section-title">Nhiệm vụ</h2>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">K</div>
+                    <div class="mini-list__meta">
+                      <strong>Khắc</strong>
+                      <span>Điều chỉnh máy lạnh P304</span>
+                    </div>
+                    <span class="list-amount">Hiện tại</span>
+                  </div>
+                  <div class="mini-list__item">
+                    <div class="mini-list__avatar">H</div>
+                    <div class="mini-list__meta">
+                      <strong>Huy</strong>
+                      <span>Sửa điện P201</span>
+                    </div>
+                    <span class="list-amount">Trong ngày</span>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </section>
+        </main>
+
+        <div data-include="../components/footer.html"></div>
+      </div>
+    </div>
+
+    <script src="../assets/js/utils/include.util.js"></script>
+    <script src="../assets/js/utils/format.util.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script src="../assets/js/components/navbar.js"></script>
+    <script>
+      document.addEventListener("partials:ready", () => {
+        initSidebar();
+        initNavbar();
+      });
+      includeAll();
+    </script>
+  </body>
+</html>
